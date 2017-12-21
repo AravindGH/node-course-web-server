@@ -3,6 +3,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 //no arguments needed
 var app = express();
 
@@ -81,6 +83,6 @@ app.get('/*', (req, res) => {
 //Binding the port to our application.
 //this will take second argument which is optional
 //app.listen(3000); also we can mention like this
-app.listen(3000, () => {
-    console.log('Server is up and running on the port:3000');
+app.listen(port, () => {
+    console.log(`Server is up and running on the port:${port}`);
 });
