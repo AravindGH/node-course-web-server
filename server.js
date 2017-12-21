@@ -70,6 +70,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+//setting up the Project's Page..
+app.get('/projects',(req,res) =>{
+    //sending the response to projects page.
+    res.render('projects.hbs',{
+        linkToFollow: 'https://github.com/aravindGh'
+    });
+});
+
 //bad --> send back json with an error message property
 //handling the bad request..
 app.get('/*', (req, res) => {
